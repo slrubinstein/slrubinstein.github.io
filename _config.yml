@@ -4,8 +4,8 @@ subtitle: steverubinstein.net
 email: your-email@domain.com
 description: 
   "A website and blog for fullstack web developer Steve Rubinstein"
-baseurl: "/blog" # the subpath of your site, e.g. /blog/
-url: "http://steverubinstein.net" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://slrubinstein.github.io" # the base hostname & protocol for your site
 twitter_username: rubinstizzle
 github_username:  slrubinstein
 
