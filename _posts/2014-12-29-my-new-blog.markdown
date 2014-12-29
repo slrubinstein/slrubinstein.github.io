@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My new blog"
+title:  "Testing 1, 2, 3"
 date:   2014-12-29 11:23:11
 categories: blog
 ---
