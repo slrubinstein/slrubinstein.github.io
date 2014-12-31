@@ -1,0 +1,40 @@
+.container {
+	margin-top: 40px;
+}
+
+.project-list {
+	display: inline-flex;
+	width: 100%;
+	margin: auto;
+}
+
+.projects {
+	width: 300px;
+	height: 380px;
+	overflow: hidden;
+
+	a {
+		display: block;
+		height: 260px;
+		width: 300px;
+		text-indent: -9999px;	
+	}
+}
+
+#snaproom {
+	background: url(../images/snaproom_1000.png);
+	background-position: -580px 0;
+}
+
+#snaproom:hover {
+	background-position: -80px 0;
+}
+
+#jazz {
+	background: url(../images/jazz_1000.png);
+	background-position: 0 0;
+}
+
+#jazz:hover {
+	background-position: -500px 0;
+}
