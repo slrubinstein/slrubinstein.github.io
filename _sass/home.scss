@@ -12,12 +12,21 @@
 	width: 300px;
 	height: 380px;
 	overflow: hidden;
+	border: 2px;
 
 	a {
 		display: block;
 		height: 260px;
 		width: 300px;
-		text-indent: -9999px;	
+		text-indent: -9999px;
+    transition: transform .1s;
+    -webkit-transition: transform .1s; /* Safari 3.1 to 6.0 */
+
+		&:hover {
+			-ms-transform: scale(1.05); /* IE 9 */
+	    -webkit-transform: scale(1.05); /* Chrome, Safari, Opera */
+	    transform: scale(1.05);;
+		}
 	}
 }
 
