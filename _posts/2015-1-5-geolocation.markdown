@@ -52,11 +52,11 @@ Simple enough, right? So our first plan was simply take the latitude and longitu
 
 I am no expert on this- but here's what it meant practically for our app. Due to the variance in accuracy between the computer and the phone, it would be very possible for me to be on the other side of the geoRoom line from my computer - while sitting at my computer! 
 
-<img class="blog-pic-small" src="../../../../images/georoom-sad.png" alt="Sadness reigns as we are in different geoRooms">
+<img class="blog-pic-small" src="/images/georoom-sad.png" alt="Sadness reigns as we are in different geoRooms">
 
 Our solution came to us when reflecting on a past project, <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Conway's Game of Life</a>. Briefly, the Game of Life is a game of evolution, where squares live or die based on their neighbor squares. We decided to treat geoRooms like Game of Life squares and create neighbors. So instead of placing our users in a geoRoom, we placed them in a geoArray of 9 geoRooms. Now all their activity is broadcast to every geoRoom in the geoArray, and to enter a room you only need to be in one geoRoom of the room's geoArray.
 
-<img class="blog-pic-small" src="../../../../images/georoom-happy.png" alt="Happy to be in a geoRoom with you">
+<img class="blog-pic-small" src="/images/georoom-happy.png" alt="Happy to be in a geoRoom with you">
 
 This is how we create the geoArray. Maybe not the most elegant looking function, but dammit, it works.
 
