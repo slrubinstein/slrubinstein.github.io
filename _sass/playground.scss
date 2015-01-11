@@ -1,0 +1,13 @@
+.pinwheel {
+	height: 200px;
+	transition: transform 1s;
+  -webkit-transition: height .2s, 1s transform .2s; /* Safari 3.1 to 6.0 */
+
+		&:hover {
+			height: 250px;
+			-ms-transform: rotate(720deg); /* IE 9 */
+	    -webkit-transform: rotate(720deg); /* Chrome, Safari, Opera */
+	    transform: rotate(720deg);
+		}
+
+}
