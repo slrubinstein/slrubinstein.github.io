@@ -12,7 +12,7 @@ Some great coding resources:
 </ul>
 
 <ul>
-	<li>Angular can be an intimidating framework and overwhelm you with options. I recommend these two style guides when thinking about how to structure your web app.</li>
+	<li>Angular can be an intimidating framework and has an overwhelming number of ways to code a task. I like these two style guides for thinking about how to structure your web app.</li>
 	<li><a href="https://github.com/johnpapa/angularjs-styleguide">John Papa Angular Style Guide</a></li>
 
 	<li><a href="https://github.com/toddmotto/angularjs-styleguide">Todd Motto Angular Style Guide</a></li>
