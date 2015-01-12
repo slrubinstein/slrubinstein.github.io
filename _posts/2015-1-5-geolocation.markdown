@@ -5,7 +5,7 @@ date:   2015-1-5 7:18:00
 categories: blog
 ---
 
-My co-programmer <a href="http://navidk-programming.appspot.com/" targe="_blank">Navid</a> and I had a lot of fun and interesting challenges when building <a href="https://snaproom.herokuapp.com" target="_blank">Snaproom</a>. What is a Snaproom? Well it's a temporary, geolocated virtual collaboration space. Maybe we should break that down a bit. 
+My co-programmer <a href="http://navidk-programming.appspot.com/" targe="_blank">Navid</a> and I had a lot of fun and interesting challenges when building <a href="https://snaproom.me" target="_blank">Snaproom</a>. What is a Snaproom? Well it's a temporary, geolocated virtual collaboration space. Maybe we should break that down a bit. 
 
 Temporary - the rooms self-destruct after a specified amount of time. 
 

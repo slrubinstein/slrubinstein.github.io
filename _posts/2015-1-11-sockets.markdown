@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "WebSockets, Part I"
+date:   2015-1-5 18:04:00
+categories: blog
+---
+
+Another interesting challenge with <a href="http://snaproom.me" target="_blank">Snaproom</a> was using web sockets, specifically the <a href="http://socket.io/" target="_blank">Socket.IO</a> library.
+
+There is a great explanation of WebSockets on <a href="http://en.wikipedia.org/wiki/WebSocket" target="_blank">Wikipedia</a>. Put simply, sockets allow a two-way communication channel between the client and the server.
+
+Usually you, the client, initiate communication by sending a request to the server (GET me that webpage!). Or the browser itself can send a request via Ajax.
+
+But what if you want to serve up some data to the client without them having to take any action? The simplest example is a chatroom. You want each new chat to appear on the screen without the user having to do anything like refresh the page. Or in a more complex example, a collaborative Google Doc, where each update is broadcast out to everyone looking at the same document. These are great use cases for WebSockets.
+
+Using Socket.IO in your app is as simple as using jQuery. Sockets run on an "emit"/"listen" cycle, where one client emits an event, the server listens to the event, and then the server broadcasts out the result to all listening clients.
+
+Here's a code snippet from a <a href="http://socket.io/get-started/chat/" target="_blank">simple chatroom tutorial</a>.
+
+{% highlight javascript %}
+// client side, after loading socket.io
+var socket = io();
+$('form').submit(function(){
+  socket.emit('chat message', $('#m').val());
+  $('#m').val('');
+  return false;
+});
+socket.on('chat message', function(msg){
+  $('#messages').append($('<li>').text(msg));
+});
+
+// server side
+io.on('connection', function(socket){
+  socket.on('chat message', function(msg){
+    io.emit('chat message', msg);
+  });
+});
+{% endhighlight %}
+
+When the form is submitted, socket.emit sends out an event called 'chat message'. Any following parameters ( ($'#m').val() ) will become parameters in the server-side callback function.
+
+On the server, we first have an io.on 'connection' event, which is fired whenever a new client joins the webpage. In the callback function, the user is assigned the variable, socket. Then you add listeners to that socket.
+
+In this chatroom, the server is listening for 'chat message', at which point it runs the callback function, taking any data from the client as parameters (in this case, $('m').val() becomes the msg parameter).
+
+The server's callback function emits another event, also called 'chat message', and sends the msg data back up to all listening clients. When the client hears 'chat message', it appends the new message to the DOM.
+
+In <a href="http://snaproom.me" target="_blank">Snaproom</a> we built a similar simple chatroom application, but we also have many other types of data that need to update a given room. In the lunch vote room, any votes or new restaurant suggestions need to update, in backgammon any player moves update the other player, and in split a bill any new items or changes to the total update all other users in the room.
+
+So that brings me to the question of organization. I couldn't find a nice, opinionated MEAN stack with sockets style guide online, so while developing Snaproom we tried out three different methods. I'll go into more detail about those in my next post.
+
+If you have opinions about sockets and organizing them in your app, please leave a comment!
