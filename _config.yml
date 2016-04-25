@@ -3,7 +3,7 @@ title: Steve Rubinstein
 subtitle: steverubinstein.net
 email: your-email@domain.com
 description: 
-  "A website and blog for fullstack web developer Steve Rubinstein"
+  "A website and blog for Steve Rubinstein"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://steverubinstein.net" # the base hostname & protocol for your site
 
