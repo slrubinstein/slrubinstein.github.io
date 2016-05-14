@@ -1,5 +1,13 @@
+$grey: #e8e8e8;
+
 .blog-pic-small {
 	height: 300px;
 	display: block;
 	margin: 0 auto;
+}
+
+.blog__example {
+	background: $grey;
+	padding: 8px;
+	margin-bottom: 15px;
 }

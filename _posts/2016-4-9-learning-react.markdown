@@ -23,7 +23,7 @@ I'll focus on a few of the points in the above links.
 **React is declarative**. I am not going to write a detailed explanation of the difference between declarative and imperative programming because I will get it wrong. My understanding (which is confirmed in at least one Stack Overflow post) is that declarative programming describes what you want to happen as opposed to line by line instructions on how to make it happen. In React you see this in a Component's render method.
 
 Take this completely out of context example from [Facebook's React Tutorial][facebook-react-tutorial].
-(Note: the HTML-y Javascript-y syntax is JSX - again, will be covered in a future post.)
+(Note: the HTML-y Javascript-y syntax is JSX, which will be covered in a future post.)
 
 {% highlight html %}
 render: function() {
